@@ -215,3 +215,24 @@ startSlide();
 function closeModal() {
     document.getElementById("downloadModal").style.display = "none";
 }
+
+// =======================
+// MOBILE NAVIGATION MENU
+// =======================
+const mobileMenu = document.getElementById("mobile-menu");
+const navList = document.querySelector("nav ul");
+
+if (mobileMenu && navList) {
+    mobileMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        navList.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    navList.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            navList.classList.remove("active");
+        });
+    });
+}
