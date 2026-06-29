@@ -1,0 +1,623 @@
+:root{
+    --black:#0A0A0A;
+    --gold:#D4AF37;
+    --gold-dark:#A87F18;
+    --white:#FFFFFF;
+    --gray:#8D8D8D;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo-text{
+    font-family:'Cinzel',serif;
+    font-size:32px;
+    font-weight:bold;
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    
+    min-height:100vh;
+     padding:120px 20px 180px;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url(content/landingpage1.png);
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    text-align:center;
+    margin-top:300px;
+     padding-top:200px; /* atur turun di sini */
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:clamp(50px,8vw,95px);
+    color:var(--gold);
+    margin-bottom:10px;
+     
+}
+
+.hero h2{
+    font-size:clamp(18px,3vw,28px);
+    font-weight:300;
+     
+}
+
+.hero p{
+    max-width:700px;
+    margin:25px auto;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:var(--gold);
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:50px;
+    margin:10px;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:var(--gold-dark);
+    color:white;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    background:var(--black);
+    color:white;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:55px;
+    color:var(--gold);
+}
+
+.stat p{
+    margin-top:10px;
+}
+/* =========================
+   EVENT LIST
+========================= */
+
+.event-list{
+    list-style:none;
+    padding:0;
+    margin-top:15px;
+}
+
+.event-list li{
+    margin:8px 0;
+    color:white;
+}
+
+/* =========================
+   PARTNER / MITRA
+========================= */
+
+.partner-list{
+    display:inline-block;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:nowrap; /* jangan pindah baris */
+}
+
+.partner-logo{
+    display:block;
+    object-fit:contain;
+}
+
+/* Ukuran masing-masing logo */
+.bpjs{
+    width:150px;
+    height:auto;
+}
+
+.brother{
+    width:110px;
+    height:auto;
+
+}
+
+.awalbros{
+    width:150px;
+    height:auto;
+}
+
+.partner-logo:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    padding:35px;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-bottom:5px solid var(--gold);
+}
+
+/* =========================
+   PORTFOLIO SLIDER
+========================= */
+
+.slider{
+    position:relative;
+    max-width:1100px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.slides{
+    position:relative;
+    width:100%;
+    height:600px;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:.8s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+video.slide{
+    background:black;
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+
+    font-size:26px;
+
+    transition:.3s;
+
+    z-index:10;
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#D4AF37;
+
+}
+
+.dots{
+
+    position:absolute;
+
+    bottom:10px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+}
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.5;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.dot.active{
+
+    background:#D4AF37;
+
+    opacity:1;
+
+}
+
+@media(max-width:768px){
+
+.slides{
+
+    height:260px;
+
+}
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+    background:var(--black);
+    color:white;
+    text-align:center;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.box{
+    background:#1d1d1d;
+    padding:25px;
+    border-radius:15px;
+    min-width:120px;
+}
+
+.box h1,
+.box h2{
+    color:#D4AF37;
+    font-size:45px;
+    font-weight:700;
+}
+
+/* =========================
+   DOWNLOAD SECTION
+========================= */
+
+#download{
+    background:#0A0A0A;
+    color:white;
+    text-align:center;
+}
+
+#download .title{
+    color:var(--gold);
+}
+
+.download-box{
+    max-width:800px;
+    margin:auto;
+    background:#151515;
+    padding:50px;
+    border-radius:20px;
+    border:1px solid rgba(212,175,55,.3);
+    box-shadow:0 0 30px rgba(212,175,55,.15);
+}
+
+.download-box h3{
+    color:var(--gold);
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+.download-box input{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:12px auto;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#222;
+    color:white;
+    text-align:center;
+}
+
+.download-box input:focus{
+    outline:none;
+    border:1px solid var(--gold);
+}
+
+/* =========================
+   MODAL DOWNLOAD
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    width:90%;
+    max-width:500px;
+    background:#151515;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(212,175,55,.3);
+}
+
+.modal-content h2{
+    color:var(--gold);
+    margin-bottom:25px;
+    font-family:'Cinzel',serif;
+}
+
+.modal-content .btn{
+    display:block;
+    width:250px;
+    margin:15px auto;
+}
+
+.close-modal{
+    float:right;
+    font-size:35px;
+    color:var(--gold);
+    cursor:pointer;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    text-align:center;
+    background:#f5f5f5;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:var(--black);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.wa{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    text-decoration:none;
+    z-index:999;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .logo-img{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+    .download-box{
+        padding:25px;
+    }
+
+    .download-box h3{
+        font-size:24px;
+    }
+
+    .modal-content{
+        padding:25px;
+    }
+
+    .modal-content .btn{
+        width:100%;
+    }
+   
+}
