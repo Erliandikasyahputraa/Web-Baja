@@ -13,6 +13,17 @@
     scroll-behavior:smooth;
 }
 
+/* =========================
+   ACCESSIBILITY
+========================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.dot:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#fff;
@@ -413,7 +424,8 @@ video.slide{
 
 .slides{
 
-    height:260px;
+    height:auto;
+    aspect-ratio:16/9;
 
 }
 
