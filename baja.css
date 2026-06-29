@@ -102,18 +102,10 @@ nav a:hover{
      padding-top:200px; /* atur turun di sini */
 }
 
-.hero h1{
-    font-family:'Cinzel',serif;
-    font-size:clamp(50px,8vw,95px);
-    color:var(--gold);
-    margin-bottom:10px;
-     
-}
-
+.hero h1,
 .hero h2{
     font-size:clamp(18px,3vw,28px);
     font-weight:300;
-     
 }
 
 .hero p{
