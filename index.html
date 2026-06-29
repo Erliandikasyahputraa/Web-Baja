@@ -1,391 +1,632 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAJA Event Organizer — Penyelenggara Kejuaraan Pencak Silat Nasional</title>
 
-<title>BAJA Event Organizer</title>
+    <!-- SEO -->
+    <meta name="description" content="BAJA Event Organizer: Manajemen kejuaraan pencak silat tingkat nasional. Registrasi digital, bagan tanding otomatis, wasit bersertifikasi, dan penyelenggaraan acara bergengsi dari awal hingga akhir.">
+    <link rel="canonical" href="https://baja-eo.com/">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baja-eo.com/">
+    <meta property="og:title" content="BAJA Event Organizer — Penyelenggara Kejuaraan Pencak Silat Nasional">
+    <meta property="og:description" content="Manajemen kejuaraan pencak silat tingkat nasional. Presisi, profesional, dan terpercaya.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200&h=630">
 
-<link rel="stylesheet" href="baja.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://baja-eo.com/">
+    <meta name="twitter:title" content="BAJA Event Organizer — Penyelenggara Kejuaraan Pencak Silat Nasional">
+    <meta name="twitter:description" content="Manajemen kejuaraan pencak silat tingkat nasional. Presisi, profesional, dan terpercaya.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200&h=630">
 
+    <!-- Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="baja.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
 </head>
 <body>
 
-<nav>
+<!-- ================================================================
+     NAVIGATION
+     ================================================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container navbar__inner">
 
-<div class="logo-container">
+        <a href="#" class="navbar__brand" aria-label="BAJA Home">
+            <img src="assets/images/logos/baja_logo.png" alt="BAJA Logo" class="navbar__logo">
+            <span class="navbar__name">BAJA</span>
+        </a>
 
-    <img src="assets/images/logos/baja_logo.png"
-         alt="BAJA Logo"
-         class="logo-img">
+        <ul class="navbar__links" id="nav-links" role="list">
+            <li><a href="#about"     data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="#services"  data-i18n="nav.services">Layanan</a></li>
+            <li><a href="#events"    data-i18n="nav.events">Agenda</a></li>
+            <li><a href="#gallery"   data-i18n="nav.gallery">Galeri</a></li>
+            <li><a href="#downloads" data-i18n="nav.downloads">Unduhan</a></li>
+        </ul>
 
-    <span class="logo-text">
-        BAJA EVENT ORGANIZER
-    </span>
+        <div class="navbar__actions">
+            <button class="lang-switch" id="lang-switch" aria-label="Ganti bahasa ke Inggris">ID / EN</button>
+            <a href="#contact" class="btn btn--primary navbar__cta" data-i18n="nav.cta">Hubungi Kami</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
 
-</div>
+    </div>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<div class="menu-toggle" id="mobile-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-</div>
-
+    <!-- Mobile Drawer -->
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer" aria-hidden="true">
+        <ul role="list">
+            <li><a href="#about"     data-i18n="nav.about"     class="mobile-link">Tentang Kami</a></li>
+            <li><a href="#services"  data-i18n="nav.services"  class="mobile-link">Layanan</a></li>
+            <li><a href="#events"    data-i18n="nav.events"    class="mobile-link">Agenda</a></li>
+            <li><a href="#gallery"   data-i18n="nav.gallery"   class="mobile-link">Galeri</a></li>
+            <li><a href="#downloads" data-i18n="nav.downloads" class="mobile-link">Unduhan</a></li>
+            <li><a href="#contact"   data-i18n="nav.cta"       class="mobile-link mobile-link--cta">Hubungi Kami</a></li>
+        </ul>
+    </div>
 </nav>
 
-<header>
-<section class="hero">
-    
-    <div class="hero-content">
-        <!--<h1>BAJA</h1> -->
-        <h1>Professional Event Organizer</h1>
-
-        <p>
-            Turning Ideas Into Extraordinary Events. <br>
-            Kejuaraan Pencak Silat di berbagai Event Nasional.
-        </p>
-
-        <a href="#portfolio" class="btn">Portfolio</a>
-        <a href="#contact" class="btn">Hubungi Kami</a>
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+<header class="hero" role="banner">
+    <div class="hero__bg" aria-hidden="true">
+        <img src="assets/images/hero/landingpage.png"
+             alt="BAJA Hero Background"
+             class="hero__img"
+             fetchpriority="high">
+        <div class="hero__overlay"></div>
+        <div class="hero__vignette"></div>
     </div>
-</section>
+
+    <div class="container hero__content">
+        <span class="t-kicker" data-i18n="hero.kicker">Manajemen Kejuaraan Profesional</span>
+        <h1 class="t-hero" data-i18n="hero.title">
+            Mengeksekusi Kejuaraan Nasional<br>dengan <em class="gold-gradient">Presisi</em>
+        </h1>
+        <p class="t-body-lg hero__desc" data-i18n="hero.desc">
+            Dari registrasi digital hingga seremoni penutupan — kami memastikan setiap pertandingan
+            berjalan adil, tertata, dan berkesan bagi atlet, pelatih, dan penyelenggara.
+        </p>
+        <div class="hero__actions">
+            <a href="#events"  class="btn btn--primary"  data-i18n="hero.primary_cta">Daftar Sekarang</a>
+            <a href="#about"   class="btn btn--ghost"    data-i18n="hero.secondary_cta">Selengkapnya</a>
+        </div>
+    </div>
+
+    <!-- Partners Trust Strip -->
+    <div class="hero__partners" aria-label="Mitra Kepercayaan">
+        <span class="hero__partners-label" data-i18n="hero.partners_label">Dipercaya Oleh</span>
+        <div class="hero__partners-logos">
+            <img src="assets/images/logos/bpjstk.png" alt="BPJS Ketenagakerjaan" class="partner-logo-img">
+            <span class="partner-logo-sep" aria-hidden="true">·</span>
+            <img src="assets/images/logos/brother.png" alt="Brother" class="partner-logo-img">
+            <span class="partner-logo-sep" aria-hidden="true">·</span>
+            <img src="assets/images/logos/awalbros.png" alt="Awal Bros" class="partner-logo-img">
+        </div>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
 
-<section class="stats">
-
-<div class="stat">
-    <h2>Event</h2>
-
-    <ul class="event-list">
-        <li>Riau Challenge 1</li>
-        <li>Tanah Melayu Championship</li>
-        <li>Riau Challenge 2</li>
-    </ul>
-</div>
-
-<div class="stat">
-<h2>Peserta</h2>
-<p>2900+</p>
-</div>
-
-<div class="stat">
-    <h2>Mitra</h2>
-
-    <div class="partner-list">
-    <img src="assets/images/logos/bpjstk.png" class="partner-logo bpjs">
-    <img src="assets/images/logos/brother.png" class="partner-logo brother">
-    <img src="assets/images/logos/awalbros.png" class="partner-logo awalbros">
-</div>
-
-   <!-- <p>50+ Mitra</p> -->
-
-</div>
-
-
-<!--  <div class="stat">
-<h2>Tahun</h2>
-<p>4</p>
-</div> -->
-
-</section>
-
-<section id="about">
-
-<h2 class="title">Tentang BAJA</h2>
-
-<div class="about">
-<p>
-BAJA Event Organizer merupakan perusahaan penyelenggara acara profesional yang bergerak di bidang manajemen event, 
-khususnya kejuaraan pencak silat dalam berbagai event nasional. Dengan pengalaman menangani ribuan peserta serta 
-bekerja sama dengan berbagai instansi pemerintah, perusahaan, dan organisasi. <br>
-BAJA EO berkomitmen memberikan pelayanan yang profesional, inovatif, dan terpercaya. <br>
-Kami percaya bahwa setiap acara memiliki nilai dan cerita tersendiri, sehingga setiap detail kami rancang secara
-maksimal untuk menghasilkan pengalaman yang sukses dan berkesan.
-</p>
-</div>
-
-</section>
-
-<section id="services">
-
-<h2 class="title">Layanan Kami</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>🏆 Championship Management</h3>
-<p>Pengelolaan kejuaraan dari registrasi hingga awarding.</p>
-</div>
-
-<!--<div class="card">
-<h3>🎤 Seminar & Workshop</h3>
-<p>Pelaksanaan seminar profesional.</p>
-</div>
-
-<div class="card">
-<h3>🏢 Corporate Event</h3>
-<p>Gathering dan event perusahaan.</p>
-</div>
-
-<div class="card">
-<h3>🎉 Festival & Competition</h3>
-<p>Event budaya dan kompetisi.</p>
-</div>-->
-
-<div class="card">
-<h3>📋 Event Administration</h3>
-<p>Manajemen data peserta dan registrasi.</p>
-</div>
-
-<!--<div class="card">
-<h3>📢 Branding & Promotion</h3>
-<p>Promosi dan publikasi event.</p>
-</div>-->
-
-</div>
-
-</section>
-
-<section id="portfolio">
-
-<h2 class="title">Portofolio Event</h2>
-
-<div class="slider" id="slider">
-
-    <div class="slides">
-
-        <!-- FOTO -->
-        <img src="assets/images/gallery/rc1.jpg" class="slide active">
-
-        <img src="assets/images/gallery/rc1-1.jpg" class="slide">
-
-        <!-- VIDEO 
-        <video class="slide" muted controls>
-            <source src="assets/videos/video1.mp4" type="video/mp4">
-        </video> -->
-
-        <!-- FOTO -->
-        <img src="assets/images/gallery/tm2.jpeg" class="slide">
-
-        <img src="assets/images/gallery/tm3.jpeg" class="slide">
-
-        <!-- FOTO -->
-        <img src="assets/images/gallery/rc2-1.jpeg" class="slide">
-
-        <img src="assets/images/gallery/rc2-2.jpeg" class="slide">
-
-        <img src="assets/images/gallery/rc2-4.jpeg" class="slide">
-
-        <img src="assets/images/gallery/rc2-5.jpeg" class="slide">
-        <!-- VIDEO -->
-        <video class="slide" muted controls>
-            <source src="assets/videos/rc2-3.mp4" type="video/mp4">
-        </video>
+<!-- ================================================================
+     STATISTICS
+     ================================================================ -->
+<section class="section stats" aria-label="Statistik Kami">
+    <div class="container">
+        <div class="stats__grid">
+            <div class="stat-card">
+                <div class="stat-card__val gold-gradient" aria-label="50 lebih">50+</div>
+                <h3 class="stat-card__label" data-i18n="stats.1.label">Kejuaraan Nasional</h3>
+                <p class="stat-card__desc" data-i18n="stats.1.desc">Sukses diselenggarakan di berbagai daerah.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__val gold-gradient" aria-label="10 ribu lebih">10k+</div>
+                <h3 class="stat-card__label" data-i18n="stats.2.label">Atlet Tanding</h3>
+                <p class="stat-card__desc" data-i18n="stats.2.desc">Terverifikasi dalam sistem pendaftaran digital kami.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__val gold-gradient" aria-label="15 tahun lebih">15+</div>
+                <h3 class="stat-card__label" data-i18n="stats.3.label">Tahun Pengalaman</h3>
+                <p class="stat-card__desc" data-i18n="stats.3.desc">Otoritas terpercaya dalam manajemen olahraga.</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+<!-- ================================================================
+     ABOUT
+     ================================================================ -->
+<section id="about" class="section about">
+    <div class="container about__grid">
 
-    <div class="dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <div class="about__content">
+            <span class="t-kicker" data-i18n="about.kicker">Standar BAJA</span>
+            <h2 class="t-h2" data-i18n="about.title">Mengangkat Kompetisi Bela Diri ke Tataran Profesional</h2>
+            <p class="t-body-lg" data-i18n="about.p1">
+                BAJA Event Organizer lahir dari satu keyakinan: kejuaraan pencak silat layak mendapat
+                standar operasional sekelas olahraga internasional. Kami hadir agar setiap atlet bisa
+                fokus bertanding, bukan mengurus teknis yang seharusnya menjadi tanggung jawab kami.
+            </p>
+            <p class="t-body-lg about__p2" data-i18n="about.p2">
+                Melalui sistem pendaftaran digital yang aman, penyusunan bagan tanding berbasis algoritma,
+                dan penugasan wasit bersertifikasi nasional, kami menjaga integritas pertandingan dan
+                martabat setiap pesilat yang turun ke gelanggang.
+            </p>
+
+            <ul class="about__features" aria-label="Keunggulan BAJA">
+                <li class="about__feature">
+                    <div class="about__feature-icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <div>
+                        <h4 class="about__feature-title" data-i18n="about.feat1_title">Verifikasi Identitas &amp; Timbang Badan Digital</h4>
+                        <p class="about__feature-desc" data-i18n="about.feat1_desc">Terhubung langsung ke sistem bagan secara real-time.</p>
+                    </div>
+                </li>
+                <li class="about__feature">
+                    <div class="about__feature-icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">gavel</span>
+                    </div>
+                    <div>
+                        <h4 class="about__feature-title" data-i18n="about.feat2_title">Panel Wasit &amp; Juri Bersertifikasi</h4>
+                        <p class="about__feature-desc" data-i18n="about.feat2_desc">Pejabat tingkat nasional dengan rotasi impartial.</p>
+                    </div>
+                </li>
+                <li class="about__feature">
+                    <div class="about__feature-icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">insights</span>
+                    </div>
+                    <div>
+                        <h4 class="about__feature-title" data-i18n="about.feat3_title">Integrasi Skor Digital Real-Time</h4>
+                        <p class="about__feature-desc" data-i18n="about.feat3_desc">Layar arena tersinkron dengan pusat administrasi.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="about__visual">
+            <div class="about__img-frame">
+                <img src="assets/images/gallery/rc1.jpg"
+                     alt="Pertandingan Pencak Silat BAJA"
+                     class="about__img"
+                     loading="lazy">
+                <div class="about__img-overlay"></div>
+                <div class="about__img-caption">
+                    <div class="about__img-caption-line"></div>
+                    <span data-i18n="about.img_caption">Kepercayaan Institusional</span>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-</div>
-
 </section>
 
-<section class="countdown">
+<!-- ================================================================
+     SERVICES
+     ================================================================ -->
+<section id="services" class="section services bg-surface-low">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="t-kicker" data-i18n="services.kicker">Keahlian Operasional</span>
+            <h2 class="t-h2" data-i18n="services.title">Solusi Acara yang Komprehensif</h2>
+            <p class="t-body-lg section-header__desc" data-i18n="services.desc">
+                Dari pendaftaran digital pertama hingga penyerahan medali terakhir, kami mengelola
+                seluruh aspek kejuaraan dengan tingkat ketelitian kelas tinggi.
+            </p>
+        </div>
 
-<h2 class="title" style="color:white">
-Upcoming Event
-</h2>
-
-<h3>HISTORIS CHAMPIONSHIP 2026</h3>
-
-<div class="timer">
-
-<div class="box">
-<h1 id="days1">00</h1>
-<p>Hari</p>
-</div>
-
-<div class="box">
-<h1 id="hours1">00</h1>
-<p>Jam</p>
-</div>
-
-<div class="box">
-<h1 id="minutes1">00</h1>
-<p>Menit</p>
-</div>
-
-<div class="box">
-<h1 id="seconds1">00</h1>
-<p>Detik</p>
-</div>
-
-</div>
-
+        <div class="services__grid">
+            <div class="service-card">
+                <div class="service-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">app_registration</span>
+                </div>
+                <h3 class="service-card__title" data-i18n="services.1.title">Manajemen Registrasi</h3>
+                <p class="service-card__desc" data-i18n="services.1.desc">Portal pendaftaran atlet berbasis cloud dengan verifikasi dokumen dan pembayaran yang aman.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">account_tree</span>
+                </div>
+                <h3 class="service-card__title" data-i18n="services.2.title">Sistem Bagan Digital</h3>
+                <p class="service-card__desc" data-i18n="services.2.desc">Algoritma penjadwalan presisi dengan pembaruan bagan secara langsung yang dapat diakses oleh pelatih.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">stadium</span>
+                </div>
+                <h3 class="service-card__title" data-i18n="services.3.title">Administrasi Arena</h3>
+                <p class="service-card__desc" data-i18n="services.3.desc">Koordinasi lapangan terstruktur: rotasi wasit, tim medis, dan logistik pertandingan.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">emoji_events</span>
+                </div>
+                <h3 class="service-card__title" data-i18n="services.4.title">Seremoni Penghargaan</h3>
+                <p class="service-card__desc" data-i18n="services.4.desc">Penyerahan medali yang khidmat dan prestisius bagi para juara.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">verified_user</span>
+                </div>
+                <h3 class="service-card__title" data-i18n="services.5.title">Kepatuhan &amp; Protokol Keselamatan</h3>
+                <p class="service-card__desc" data-i18n="services.5.desc">Kepatuhan penuh terhadap regulasi federasi nasional: peralatan standar, tenaga medis bersertifikat, zona pemanasan yang layak, dan asuransi acara komprehensif demi ketenangan pikiran seluruh pihak.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="countdown">
+<!-- ================================================================
+     EVENTS & COUNTDOWN
+     ================================================================ -->
+<section id="events" class="section events">
+    <div class="container">
+        <div class="events__header">
+            <div>
+                <span class="t-kicker" data-i18n="events.kicker">Kejuaraan Berikutnya</span>
+                <h2 class="t-h2" data-i18n="events.title">Agenda Mendatang</h2>
+            </div>
+            <a href="#contact" class="btn btn--text" data-i18n="events.view_all">
+                Lihat Semua
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </a>
+        </div>
 
-<!--<h2 class="title" style="color:white">
-Upcoming Event
-</h2>-->
+        <div class="event-card-container" style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <!-- Event 1 -->
+            <div class="event-card" role="region" aria-label="Historis Championship 2026">
+                <div class="event-card__info">
+                    <span class="event-card__badge">
+                        <span class="event-card__badge-dot" aria-hidden="true"></span>
+                        <span data-i18n="events.status">Pendaftaran Dibuka</span>
+                    </span>
+                    <h3 class="event-card__title">HISTORIS CHAMPIONSHIP 2026</h3>
+                    <dl class="event-card__meta">
+                        <div class="meta-item">
+                            <dt class="sr-only">Tanggal</dt>
+                            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                            <dd data-i18n="events.date">Segera Diumumkan</dd>
+                        </div>
+                        <div class="meta-item">
+                            <dt class="sr-only">Lokasi</dt>
+                            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <dd data-i18n="events.location">Gelanggang Remaja, Pekanbaru, Riau</dd>
+                        </div>
+                    </dl>
+                    <div class="event-card__actions">
+                        <a href="#contact" class="btn btn--primary" data-i18n="hero.primary_cta">Daftar Sekarang</a>
+                        <a href="#downloads" class="btn btn--outline" data-i18n="events.view_details">Lihat Berkas</a>
+                    </div>
+                </div>
 
-<h3>SWARNADWIPA CHAMPIONSHIP 2026</h3>
+                <div class="event-card__timer" data-target-date="2026-08-15T08:00:00" aria-label="Hitung mundur menuju kejuaraan">
+                    <div class="event-card__timer-bg" aria-hidden="true"></div>
+                    <div class="event-card__timer-content">
+                        <p class="event-card__timer-label" data-i18n="events.timer_label">Waktu Tersisa</p>
+                        <div class="timer-row">
+                            <div class="timer-unit">
+                                <span class="timer-val t-days" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.days">Hari</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-hours" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.hours">Jam</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-mins" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.mins">Menit</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-secs" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.secs">Detik</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="timer">
+            <!-- Event 2 -->
+            <div class="event-card" role="region" aria-label="Riau Martial Arts Open 2026">
+                <div class="event-card__info">
+                    <span class="event-card__badge">
+                        <span class="event-card__badge-dot" aria-hidden="true"></span>
+                        <span data-i18n="events.status_open">Pendaftaran Dibuka</span>
+                    </span>
+                    <h3 class="event-card__title">RIAU MARTIAL ARTS OPEN 2026</h3>
+                    <dl class="event-card__meta">
+                        <div class="meta-item">
+                            <dt class="sr-only">Tanggal</dt>
+                            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                            <dd data-i18n="events.date_riau">Oktober 2026</dd>
+                        </div>
+                        <div class="meta-item">
+                            <dt class="sr-only">Lokasi</dt>
+                            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <dd data-i18n="events.location_riau">Gedung Pemuda, Pekanbaru, Riau</dd>
+                        </div>
+                    </dl>
+                    <div class="event-card__actions">
+                        <a href="#contact" class="btn btn--primary" data-i18n="hero.primary_cta">Daftar Sekarang</a>
+                        <a href="#downloads" class="btn btn--outline" data-i18n="events.view_details">Lihat Berkas</a>
+                    </div>
+                </div>
 
-<div class="box">
-<h2 id="days2">00</h2>
-<p>Hari</p>
-</div>
-
-<div class="box">
-<h2 id="hours2">00</h2>
-<p>Jam</p>
-</div>
-
-<div class="box">
-<h2 id="minutes2">00</h2>
-<p>Menit</p>
-</div>
-
-<div class="box">
-<h2 id="seconds2">00</h2>
-<p>Detik</p>
-</div>
-
-</div>
-
+                <div class="event-card__timer" data-target-date="2026-10-10T09:00:00" aria-label="Hitung mundur menuju kejuaraan">
+                    <div class="event-card__timer-bg" aria-hidden="true"></div>
+                    <div class="event-card__timer-content">
+                        <p class="event-card__timer-label" data-i18n="events.timer_label">Waktu Tersisa</p>
+                        <div class="timer-row">
+                            <div class="timer-unit">
+                                <span class="timer-val t-days" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.days">Hari</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-hours" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.hours">Jam</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-mins" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.mins">Menit</span>
+                            </div>
+                            <span class="timer-sep" aria-hidden="true">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-val t-secs" aria-live="polite" aria-atomic="true">00</span>
+                                <span class="timer-label" data-i18n="timer.secs">Detik</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ================================================================
+     GALLERY
+     ================================================================ -->
+<section id="gallery" class="section gallery bg-surface-low">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="t-kicker" data-i18n="gallery.kicker">Dokumentasi</span>
+            <h2 class="t-h2" data-i18n="gallery.title">Galeri Kegiatan</h2>
+            <p class="t-body-lg section-header__desc" data-i18n="gallery.desc">
+                Melihat lebih dekat keseruan pertandingan, dedikasi, dan sportivitas para atlet di arena nasional.
+            </p>
+        </div>
 
-<section id="download">
+        <div class="gallery__grid" aria-label="Galeri foto kejuaraan">
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc1-1.jpg"
+                     alt="Pertandingan Pencak Silat BAJA" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Kategori Tanding Dewasa</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc2-2.jpeg"
+                     alt="Aksi pesilat di atas matras kejuaraan BAJA" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Ketegangan Gelanggang</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc1-2.jpg"
+                     alt="Seremoni medali pemenang kejuaraan" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Seremoni Juara</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc2-1.jpeg"
+                     alt="Visual kejuaraan pencak silat nasional" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Kejuaraan Prestisius</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc1-3.jpg"
+                     alt="Teknik bantingan dalam pertandingan pencak silat" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Teknik &amp; Strategi</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc1-4.jpg"
+                     alt="Wasit bersertifikasi memimpin pertandingan" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Keputusan Imparsial</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc1-5.jpg"
+                     alt="Upacara pembukaan kejuaraan pencak silat" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Upacara Pembukaan</div>
+            </div>
+            <div class="gallery__item">
+                <img src="assets/images/gallery/rc2-4.jpeg"
+                     alt="Persiapan pesilat sebelum bertanding" loading="lazy" class="gallery__img">
+                <div class="gallery__caption">Fokus Atlet</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h2 class="title">
-Download Berkas Kejuaraan
-</h2>
+<!-- ================================================================
+     DOWNLOADS
+     ================================================================ -->
+<section id="downloads" class="section downloads">
+    <div class="container">
+        <div class="downloads__header">
+            <div>
+                <span class="t-kicker" data-i18n="downloads.kicker">Pusat Unduhan</span>
+                <h2 class="t-h2" data-i18n="downloads.title">Berkas Resmi Kejuaraan</h2>
+            </div>
+            <p class="t-body-sm downloads__header-desc" data-i18n="downloads.desc">
+                Dokumen resmi, panduan, dan materi promosi untuk kejuaraan mendatang.
+            </p>
+        </div>
 
-<div class="download-box">
+        <div class="downloads__grid">
+            <a href="#" class="download-card" aria-label="Unduh Proposal Kejuaraan, PDF 2.4 MB">
+                <div class="download-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">description</span>
+                </div>
+                <div class="download-card__body">
+                    <h4 class="download-card__title" data-i18n="downloads.1">Proposal Kejuaraan</h4>
+                    <p class="download-card__meta">PDF · 2.4 MB</p>
+                </div>
+                <span class="material-symbols-outlined download-card__dl-icon" aria-hidden="true">download</span>
+            </a>
+            <a href="#" class="download-card" aria-label="Unduh Panduan Manajer, PDF 1.8 MB">
+                <div class="download-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">menu_book</span>
+                </div>
+                <div class="download-card__body">
+                    <h4 class="download-card__title" data-i18n="downloads.2">Panduan Manajer</h4>
+                    <p class="download-card__meta">PDF · 1.8 MB</p>
+                </div>
+                <span class="material-symbols-outlined download-card__dl-icon" aria-hidden="true">download</span>
+            </a>
+            <a href="#" class="download-card" aria-label="Unduh Poster Resmi, JPG 5.1 MB">
+                <div class="download-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">campaign</span>
+                </div>
+                <div class="download-card__body">
+                    <h4 class="download-card__title" data-i18n="downloads.3">Poster Resmi</h4>
+                    <p class="download-card__meta">JPG · 5.1 MB</p>
+                </div>
+                <span class="material-symbols-outlined download-card__dl-icon" aria-hidden="true">download</span>
+            </a>
+            <a href="#" class="download-card" aria-label="Unduh Buku Peraturan IPSI 2022, PDF 4.2 MB">
+                <div class="download-card__icon-wrap" aria-hidden="true">
+                    <span class="material-symbols-outlined">gavel</span>
+                </div>
+                <div class="download-card__body">
+                    <h4 class="download-card__title" data-i18n="downloads.4">Buku Peraturan IPSI 2022</h4>
+                    <p class="download-card__meta">PDF · 4.2 MB</p>
+                </div>
+                <span class="material-symbols-outlined download-card__dl-icon" aria-hidden="true">download</span>
+            </a>
+        </div>
+    </div>
+</section>
 
-<h3>Historis Championship 2026</h3>
+<!-- ================================================================
+     CONTACT
+     ================================================================ -->
+<section id="contact" class="section contact bg-surface-low">
+    <div class="container contact__grid">
 
-<input type="text" id="nama" placeholder="Nama Lengkap">
+        <div class="contact__info">
+            <span class="t-kicker" data-i18n="contact.kicker">Hubungi Kami</span>
+            <h2 class="t-h2" data-i18n="contact.title">Bermitra dengan Presisi</h2>
+            <p class="t-body-lg contact__desc" data-i18n="contact.desc">
+                Siap meningkatkan standar kejuaraan Anda? Hubungi tim manajemen kami untuk solusi
+                operasional yang dirancang khusus sesuai kebutuhan Anda.
+            </p>
 
-<input type="text" id="kontingen" placeholder="Asal Kontingen">
+            <ul class="contact__list" aria-label="Informasi kontak">
+                <li class="contact__item">
+                    <div class="contact__icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <strong class="contact__item-label" data-i18n="contact.address_label">Kantor Pusat</strong>
+                        <address class="contact__item-value">
+                            Jl. Sari Utama No. 18, Kel. Air Dingin,<br>
+                            Kec. Bukit Raya, Pekanbaru, 28284 Riau
+                        </address>
+                    </div>
+                </li>
+                <li class="contact__item">
+                    <div class="contact__icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                    <div>
+                        <strong class="contact__item-label" data-i18n="contact.email_label">Surel</strong>
+                        <a href="mailto:baja.eventorganizer@gmail.com" class="contact__item-value">
+                            baja.eventorganizer@gmail.com
+                        </a>
+                    </div>
+                </li>
+                <li class="contact__item">
+                    <div class="contact__icon-wrap" aria-hidden="true">
+                        <span class="material-symbols-outlined">phone</span>
+                    </div>
+                    <div>
+                        <strong class="contact__item-label" data-i18n="contact.phone_label">Telepon</strong>
+                        <a href="tel:+6287761005104" class="contact__item-value">+62 877 6100 5104</a>
+                    </div>
+                </li>
+            </ul>
 
-<input
-    type="tel"
-    id="hp"
-    placeholder="Nomor HP"
-    inputmode="numeric"
-    pattern="[0-9]+"
-    maxlength="15"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <a href="https://wa.me/6287761005104" target="_blank" rel="noopener noreferrer"
+               class="btn btn--whatsapp" aria-label="Hubungi BAJA via WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                <span data-i18n="contact.wa_cta">Chat di WhatsApp</span>
+            </a>
+        </div>
 
-<div class="download-btns">
-
-<button
-class="btn"
-onclick="downloadBerkas()">
-
-📥 Download Berkas
-
-</button>
-
-</div>
-
-</div>
-
-<!-- POPUP DOWNLOAD -->
-
-<div id="downloadModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close-modal" onclick="closeModal()">
-            &times;
-        </span>
-
-        <h2>Pilih Berkas</h2>
-
-        <a href="assets/documents/proposal.pdf" download class="btn">
-            📘 Proposal
-        </a>
-
-        <a href="assets/images/gallery/flyer.png" download class="btn">
-            📄 Flyer
-        </a>
-
-       <!-- <a href="berkas/handbook.pdf" download class="btn">
-            📘 Handbook
-        </a>
-
-        <a href="berkas/rulebook.pdf" download class="btn">
-            📋 Rule Book
-        </a> -->
+        <div class="contact__map-wrap" aria-label="Peta lokasi kantor BAJA">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.658603681466!2d104.46049211475395!3d0.473595799655767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a9c0f99723cb%3A0x6b7724128f73dd!2sPekanbaru%2C%20Riau%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1684829283737!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta lokasi kantor BAJA Event Organizer di Pekanbaru, Riau">
+            </iframe>
+        </div>
 
     </div>
-
-</div>
-
 </section>
-
-<section id="contact" class="contact">
-
-<h2 class="title">Hubungi Kami</h2>
-
-<p>📍 jl. Sari utama no 18 kel. Air dingin kec. Bukit raya pekanbaru, 28284 Riau</p>
-<p>📞 +62 87761005104</p>
-<p>📧 baja.eventorganizer@gmail.com</p>
-<p>📷 @bajaeventorganizer</p>
-
-<br>
-
-<a class="btn" href="#">
-Hubungi Sekarang
-</a>
-
-</section>
-
-<footer>
-
-BAJA Event Organizer © 2023
-
-</footer>
 
 </main>
 
-<a
-class="wa"
-href="https://wa.me/6281234567890"
-target="_blank">
-💬
-</a>
-<script src="baja.js"></script>
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+        <div class="footer__brand">
+            <div class="footer__brand-logo" aria-hidden="true">
+                <img src="assets/images/logos/baja_logo.png" alt="BAJA Logo" class="navbar__logo navbar__logo--sm" style="width: 30px; height: 30px;">
+                <span class="navbar__name">BAJA</span>
+            </div>
+            <p class="footer__tagline" data-i18n="footer.tagline">Penyelenggara Kejuaraan Pencak Silat Profesional</p>
+        </div>
 
+        <nav class="footer__nav" aria-label="Footer Navigation">
+            <a href="#about"     data-i18n="nav.about">Tentang Kami</a>
+            <a href="#services"  data-i18n="nav.services">Layanan</a>
+            <a href="#events"    data-i18n="nav.events">Agenda</a>
+            <a href="#gallery"   data-i18n="nav.gallery">Galeri</a>
+            <a href="#downloads" data-i18n="nav.downloads">Unduhan</a>
+        </nav>
+
+        <p class="footer__copy">
+            <small>&copy; <span id="footer-year">2025</span> BAJA Event Organizer.</small>
+        </p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/6287761005104"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="floating-wa"
+   aria-label="Hubungi BAJA via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
+
+<script src="baja.js"></script>
 </body>
 </html>
